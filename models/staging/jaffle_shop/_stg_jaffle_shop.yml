@@ -3,14 +3,16 @@ models:
     description: The grain of this table is one unique customer per row.
     columns:
       - name: customer_id
-        description: Primary key. 
+        description: unique identifier for a customer.
         tests:
           - unique
           - not_null
       - name: first_name
+        description: customer's given name.
         tests:
           - not_null
       - name: last_name
+        description: customer's family name.
         tests:
           - not_null
 
